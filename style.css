@@ -132,26 +132,20 @@ footer {
   padding: 30px;
   margin-top: 80px;
 }
-.kegiatan {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.kegiatan h2 {
-  margin-bottom: 30px;
-  color: #1e3a8a;
-}
-
-/* container utama */
 .slider-container {
   position: relative;
-  max-width: 650px;
+  max-width: 600px;
   margin: auto;
+  background: white;
+  padding: 25px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* slide */
 .slide {
   display: none;
+  text-align: center;
 }
 
 .slide.active {
@@ -160,17 +154,15 @@ footer {
 
 .slide img {
   width: 100%;
+  max-height: 320px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .slide p {
-  margin-top: 15px;
-  padding: 14px;
-  background: #ffffff;
-  border-radius: 10px;
+  margin-top: 16px;
   font-size: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  color: #334155;
 }
 
 /* tombol */
@@ -178,24 +170,27 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(37, 99, 235, 0.9);
+  background: #2563eb;
   color: white;
   border: none;
-  font-size: 22px;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  font-size: 22px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn.left {
+  left: -22px;
+}
+
+.slider-btn.right {
+  right: -22px;
 }
 
 .slider-btn:hover {
   background: #1e40af;
-}
-
-.slider-btn.left {
-  left: -20px;
-}
-
-.slider-btn.right {
-  right: -20px;
 }
