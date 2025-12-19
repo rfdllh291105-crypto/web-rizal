@@ -194,3 +194,11 @@ footer {
 .slider-btn:hover {
   background: #1e40af;
 }
+/* HAPUS PANAH BAWAH */
+.scroll-down,
+.arrow-down,
+.next,
+.down,
+.slider-container::after {
+  display: none !important;
+}
