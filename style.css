@@ -132,54 +132,6 @@ footer {
   padding: 30px;
   margin-top: 80px;
 }
-.slider {
-  position: relative;
-  max-width: 700px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.slide {
-  display: none;
-  text-align: center;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slide img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.slide p {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #2563eb;
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.nav:hover {
-  background: #1e40af;
-}
 .kegiatan {
   text-align: center;
   padding: 60px 20px;
