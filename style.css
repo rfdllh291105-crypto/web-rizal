@@ -133,28 +133,25 @@ footer {
   margin-top: 80px;
 }
 .kegiatan {
-  text-align: center;
   padding: 60px 20px;
+  text-align: center;
 }
 
 .kegiatan h2 {
   margin-bottom: 30px;
-  color: #1e40af;
+  color: #1e3a8a;
 }
 
-.slider {
+/* container utama */
+.slider-container {
   position: relative;
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
 }
 
-.slides {
-  overflow: hidden;
-}
-
+/* slide */
 .slide {
   display: none;
-  animation: fade 0.5s ease-in-out;
 }
 
 .slide.active {
@@ -164,43 +161,41 @@ footer {
 .slide img {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .slide p {
+  margin-top: 15px;
+  padding: 14px;
   background: #ffffff;
-  padding: 15px;
   border-radius: 10px;
+  font-size: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* tombol */
-.nav {
+.slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #2563eb;
+  background: rgba(37, 99, 235, 0.9);
   color: white;
   border: none;
   font-size: 22px;
-  padding: 10px 14px;
-  cursor: pointer;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.nav:hover {
+.slider-btn:hover {
   background: #1e40af;
 }
 
-.prev {
+.slider-btn.left {
   left: -20px;
 }
 
-.next {
+.slider-btn.right {
   right: -20px;
-}
-
-@keyframes fade {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
