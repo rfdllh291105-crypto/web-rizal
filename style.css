@@ -132,68 +132,6 @@ footer {
   padding: 30px;
   margin-top: 80px;
 }
-.slider-container {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-  background: white;
-  padding: 25px 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* slide */
-.slide {
-  display: none;
-  text-align: center;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slide img {
-  width: 100%;
-  max-height: 320px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.slide p {
-  margin-top: 16px;
-  font-size: 15px;
-  color: #334155;
-}
-
-/* tombol */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #2563eb;
-  color: white;
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 22px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-btn.left {
-  left: -22px;
-}
-
-.slider-btn.right {
-  right: -22px;
-}
-
-.slider-btn:hover {
-  background: #1e40af;
-}
 /* HAPUS PANAH BAWAH */
 .scroll-down,
 .arrow-down,
