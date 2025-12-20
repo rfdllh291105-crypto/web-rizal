@@ -294,6 +294,7 @@ footer {
 }
 
 /* TEKS JADI PARAGRAF */
+
 .slide p {
   text-align: justify;
   line-height: 1.8;
@@ -303,14 +304,44 @@ footer {
   margin: auto;
 }
 
-.slide {
+.kegiatan {
+  text-align: center;
+  margin: 80px auto;
+}
+
+.slider {
   position: relative;
-  background: #fff;
-  border-radius: 20px;
-  padding: 40px 80px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-  max-width: 900px;
+  max-width: 600px;
   margin: auto;
+}
+
+.slides {
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.slide p {
+  text-align: justify;
+  line-height: 1.7;
 }
 
 /* PANAH */
@@ -318,33 +349,15 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
   background: #2563eb;
   color: white;
   border: none;
-  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   cursor: pointer;
+  font-size: 20px;
 }
 
-/* KIRI & KANAN */
-.nav.prev {
-  left: 20px;
-}
-
-.nav.next {
-  right: 20px;
-}
-
-.image-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.image-row img {
-  width: 260px;
-  border-radius: 16px;
-}
+.prev { left: -60px; }
+.next { right: -60px; }
