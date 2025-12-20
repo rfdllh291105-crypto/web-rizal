@@ -48,36 +48,44 @@
 
    <div class="slider">
 
-  <!-- KEGIATAN 1 -->
-  <div class="slide active">
-    <img src="kegiatan1.jpg" class="foto-utama">
+  <section class="slider-wrapper">
 
-    <p class="deskripsi">
-      Event BSI Flash – Untuk pertama kalinya saya dilibatkan dalam acara
-      Event BSI Flash yang diadakan pada tanggal 11 September 2025 di kampus
-      UBSI Cilebut. Pada event tersebut saya menjadi panitia sebagai seksi
-      keamanan sekaligus screening untuk mengecek barang bawaan peserta yang 
-      mengikuti event, coach dari masing masing sekolah yang sudah terdaftar 
-      pada event tersebut dan para penonton untuk tidak membawa rokok ataupun 
-      vape dan benda tajam kedalam lingkungann kampus.
-    </p>
+  <button class="nav prev" onclick="prevSlide()">‹</button>
 
+  <div class="slider">
 
-  <!-- KEGIATAN 2 -->
-  <div class="slide">
-    <div class="foto-grup">
-      <img src="kegiatan2-2.jpg" class="foto-utama">
-      <img src="kegiatan2-3.jpg" class="foto-utama">
-     
-      <p class="deskripsi">
-      Kegiatan 2 – Menjadi panitia kegiatan kampus.
-    </p>
+    <div class="slide active">
+      <img src="kegiatan1.jpg" alt="Kegiatan 1">
+      <p>
+       Event BSI Flash – Untuk pertama kalinya saya dilibatkan dalam acara 
+       Event BSI Flash yang diadakan pada tanggal 11 September 2025 di kampus 
+       UBSI Cilebut. Pada event tersebut saya menjadi panitia sebagai seksi 
+       keamanan sekaligus screening untuk mengecek barang bawaan peserta yang 
+       mengikuti event, coach dari masing masing sekolah yang sudah terdaftar 
+       pada event tersebut dan para penonton untuk tidak membawa rokok ataupun 
+       vape dan benda tajam kedalam lingkungann kampus.
+      </p>
+    </div>
+
+    <div class="slide">
+      <img src="kegiatan2-2.jpg">
+      <img src="kegiatan2-3.jpg">     
+        Kegiatan 2 – Menjadi panitia kegiatan kampus.
+      </p>
+    </div>
+
+    <div class="slide">
+      <img src="foto/kegiatan3.jpg" alt="Kegiatan 3">
+      <p>
+        Kegiatan 3 – Mengikuti seminar pengembangan skill profesional.
+      </p>
+    </div>
+
   </div>
 
-</div>
+  <button class="nav next" onclick="nextSlide()">›</button>
 
-<button class="prev" onclick="prevSlide()">‹</button>
-<button class="next" onclick="nextSlide()">›</button>
+</section>
 
 
 <script src="script.js"></script>
