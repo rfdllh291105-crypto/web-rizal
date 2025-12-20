@@ -416,3 +416,27 @@ footer {
 
 .prev { left: -55px; }
 .next { right: -55px; }
+
+.foto-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.foto-row img {
+  width: 48%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .foto-row {
+    flex-direction: column;
+  }
+
+  .foto-row img {
+    width: 100%;
+  }
+}
