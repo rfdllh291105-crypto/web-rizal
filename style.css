@@ -263,3 +263,66 @@ footer {
   font-size: 22px;
   cursor: pointer;
 }
+
+.slider-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.slider {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 60px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* FOTO */
+.slide img {
+  width: 260px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+/* TEKS JADI PARAGRAF */
+.slide p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #334155;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* TOMBOL */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2563eb;
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* POSISI PRESISI */
+.nav.prev {
+  left: -22px;
+}
+
+.nav.next {
+  right: -22px;
+}
