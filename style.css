@@ -198,3 +198,26 @@ footer {
 .slider-btn.right {
   right: -60px;
 }
+
+.foto-grup {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.foto-grup img {
+  width: 48%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .foto-grup {
+    flex-direction: column;
+  }
+
+  .foto-grup img {
+    width: 100%;
+  }
+}
