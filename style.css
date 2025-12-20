@@ -361,3 +361,58 @@ footer {
 
 .prev { left: -60px; }
 .next { right: -60px; }
+
+.kegiatan {
+  text-align: center;
+  margin: 80px auto;
+}
+
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.slide p {
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* PANAH */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.prev { left: -55px; }
+.next { right: -55px; }
