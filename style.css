@@ -303,26 +303,67 @@ footer {
   margin: auto;
 }
 
+.slider-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* CARD */
+.slider {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 70px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* SLIDE */
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* FOTO */
+.slide img {
+  width: 260px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+/* TEKS */
+.slide p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 15px;
+  max-width: 700px;
+  margin: auto;
+}
+
 /* TOMBOL */
 .nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #2563eb;
-  color: white;
-  border: none;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  border: none;
   font-size: 22px;
   cursor: pointer;
+  z-index: 10;
 }
 
-/* POSISI PRESISI */
+/* POSISI FIX */
 .nav.prev {
-  left: -22px;
+  left: -55px;
 }
 
 .nav.next {
-  right: -22px;
+  right: -55px;
 }
