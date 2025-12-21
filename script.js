@@ -1,18 +1,20 @@
-let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 
-function showSlide(index) {
+let index = 0;
+
+function showSlide(i) {
   slides.forEach(slide => slide.classList.remove('active'));
-  slides[index].classList.add('active');
+  slides[i].classList.add('active');
 }
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  showSlide(currentSlide);
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
 });
 
-document.querySelector('.prev').addEventListener('click', () => {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  showSlide(currentSlide);
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
 });

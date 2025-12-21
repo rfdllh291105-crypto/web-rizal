@@ -399,6 +399,24 @@ footer {
   font-size: 15px;
 }
 
+/* PANAH */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.prev { left: -55px; }
+.next { right: -55px; }
+
 .foto-row {
   display: flex;
   gap: 15px;
@@ -428,41 +446,85 @@ footer {
   overflow: hidden;
 }
 
-.slider-card {
-  position: relative;
-}
-
+/* tombol panah */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  background: #555;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   border-radius: 50%;
+  font-size: 24px;
   cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  z-index: 10;
+  z-index: 20;
 }
 
-.arrow.prev {
-  left: 20px;
+/* kiri */
+.arrow-left {
+  left: 15px;
 }
 
-.arrow.next {
-  right: 20px;
+/* kanan */
+.arrow-right {
+  right: 15px;
+}
+.slider-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 60px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.slides {
+  width: 100%;
 }
 
 .slide {
   display: none;
+  text-align: center;
 }
 
 .slide.active {
   display: block;
+}
+
+.slide-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* PANAH */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #555;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.arrow.prev {
+  left: 15px;
+}
+
+.arrow.next {
+  right: 15px;
 }
