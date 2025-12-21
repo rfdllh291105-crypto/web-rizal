@@ -579,3 +579,39 @@ footer {
 .arrow.next {
   right: -22px;
 }
+
+/* === FIX POSISI PANAH DI TENGAH CARD === */
+.slider-card {
+  position: relative;
+}
+
+/* tombol panah */
+.slider-card .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 30;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* kiri */
+.slider-card .arrow.prev {
+  left: -22px;
+}
+
+/* kanan */
+.slider-card .arrow.next {
+  right: -22px;
+}
