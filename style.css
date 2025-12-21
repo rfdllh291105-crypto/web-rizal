@@ -536,3 +536,46 @@ footer {
 .arrow.next {
   right: -22px;  /* keluar dikit dari card */
 }
+
+.slider-card {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* slide */
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* panah */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.prev {
+  left: -22px;
+}
+
+.arrow.next {
+  right: -22px;
+}
