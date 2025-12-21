@@ -656,3 +656,54 @@ footer {
 .slider-card .arrow.next {
   right: -24px !important;
 }
+
+/* =========================
+   FIX FINAL TOMBOL SLIDER
+   ========================= */
+
+.slider-card {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* pastikan slide & gambar TIDAK nutup tombol */
+.slides,
+.slide,
+.slide img {
+  position: relative;
+  z-index: 1;
+}
+
+/* tombol panah */
+.slider-card .arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+/* kiri */
+.slider-card .arrow.prev {
+  left: 16px !important;
+}
+
+/* kanan */
+.slider-card .arrow.next {
+  right: 16px !important;
+}
