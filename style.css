@@ -616,22 +616,15 @@ footer {
   right: -22px;
 }
 
-/* ===== FIX TOTAL TOMBOL SLIDER ===== */
+/* ===============================
+   FINAL FIX SLIDER BUTTON (OVERRIDE)
+   =============================== */
 
-/* parent HARUS jadi acuan */
 .slider-card {
   position: relative;
   overflow: visible !important;
 }
 
-/* jangan nutup tombol */
-.slider,
-.slides,
-.slide {
-  overflow: visible !important;
-}
-
-/* tombol panah */
 .slider-card .arrow {
   position: absolute !important;
   top: 50% !important;
@@ -646,21 +639,20 @@ footer {
   font-size: 22px;
   cursor: pointer;
 
-  z-index: 9999 !important;
-
   display: flex !important;
   align-items: center;
   justify-content: center;
 
+  z-index: 9999 !important;
   pointer-events: auto !important;
 }
 
 /* kiri */
 .slider-card .arrow.prev {
-  left: -25px !important;
+  left: -24px !important;
 }
 
 /* kanan */
 .slider-card .arrow.next {
-  right: -25px !important;
+  right: -24px !important;
 }
