@@ -399,24 +399,6 @@ footer {
   font-size: 15px;
 }
 
-/* PANAH */
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #2563eb;
-  color: #fff;
-  border: none;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.prev { left: -55px; }
-.next { right: -55px; }
-
 .foto-row {
   display: flex;
   gap: 15px;
@@ -446,33 +428,41 @@ footer {
   overflow: hidden;
 }
 
-/* tombol panah */
+.slider-card {
+  position: relative;
+}
+
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 45px;
-  height: 45px;
-  background: rgba(0, 0, 0, 0.6);
+  width: 44px;
+  height: 44px;
+  background: #555;
   color: white;
   border: none;
   border-radius: 50%;
-  font-size: 24px;
   cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  z-index: 20;
+  z-index: 10;
 }
 
-/* kiri */
-.arrow-left {
-  left: 15px;
+.arrow.prev {
+  left: 20px;
 }
 
-/* kanan */
-.arrow-right {
-  right: 15px;
+.arrow.next {
+  right: 20px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
 }
