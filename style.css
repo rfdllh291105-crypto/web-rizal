@@ -707,3 +707,60 @@ footer {
 .slider-card .arrow.next {
   right: 16px !important;
 }
+
+
+/* =========================
+   FINAL FIX — SLIDER SAJA
+   ========================= */
+
+/* hidupin lagi tombol next */
+.arrow.next {
+  display: flex !important;
+}
+
+/* pastikan card jadi patokan */
+.slider-card {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* jangan biarin slide nutup tombol */
+.slides,
+.slide,
+.slide img {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* tombol panah FIX */
+.slider-card .arrow {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+/* kiri & kanan — TENGAH CARD */
+.slider-card .arrow.prev {
+  left: 16px !important;
+}
+
+.slider-card .arrow.next {
+  right: 16px !important;
+}
