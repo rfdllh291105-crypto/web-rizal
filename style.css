@@ -800,17 +800,31 @@ footer {
   right: 16px;
 }
 
-.slides {
+
+.slider-card .arrow {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+
+  cursor: pointer;
 }
 
-.slide {
-  min-width: 100%;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+.slider-card .arrow.prev {
+  padding-right: 1px; /* geser dikit ke kanan */
 }
 
-.slide.active {
-  opacity: 1;
+.slider-card .arrow.next {
+  padding-left: 1px; /* geser dikit ke kiri */
 }
