@@ -828,3 +828,56 @@ footer {
 .slider-card .arrow.next {
   padding-left: 1px; /* geser dikit ke kiri */
 }
+
+
+/* RESET TOTAL ISI TOMBOL */
+.slider-card .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: #2563eb;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+}
+
+/* PANAH PAKE PSEUDO ELEMENT */
+.slider-card .arrow::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+
+  display: block;
+}
+
+/* KIRI */
+.slider-card .arrow.prev::before {
+  transform: rotate(-135deg);
+}
+
+/* KANAN */
+.slider-card .arrow.next::before {
+  transform: rotate(45deg);
+}
+
+/* POSISI */
+.slider-card .arrow.prev {
+  left: 15px;
+}
+
+.slider-card .arrow.next {
+  right: 15px;
+}
