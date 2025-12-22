@@ -900,29 +900,3 @@ footer {
   justify-content: center;
 }
 
-/* PANAH */
-.slider-card .arrow span {
-  width: 10px;
-  height: 10px;
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
-}
-
-/* kiri */
-.slider-card .arrow.prev span {
-  transform: rotate(-135deg);
-}
-
-/* kanan */
-.slider-card .arrow.next span {
-  transform: rotate(45deg);
-}
-
-/* posisi */
-.slider-card .arrow.prev {
-  left: 16px;
-}
-
-.slider-card .arrow.next {
-  right: 16px;
-}
