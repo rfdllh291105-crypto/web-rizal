@@ -765,3 +765,52 @@ footer {
   right: 16px !important;
 }
 
+.slider-card {
+  position: relative;
+}
+
+.slider-card .arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  background: #2563eb;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20;
+}
+
+.slider-card .arrow.prev {
+  left: 16px;
+}
+
+.slider-card .arrow.next {
+  right: 16px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
