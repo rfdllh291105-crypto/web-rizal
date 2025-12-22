@@ -765,35 +765,3 @@ footer {
   right: 16px !important;
 }
 
-.slider-card {
-  position: relative;
-}
-
-.slider-card .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: none;
-
-  background: #2563eb; /* biru */
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-card .arrow.prev {
-  left: 15px;
-}
-
-.slider-card .arrow.next {
-  right: 15px;
-}
