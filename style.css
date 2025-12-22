@@ -900,3 +900,40 @@ footer {
   justify-content: center;
 }
 
+.slider-card {
+  position: relative;
+}
+
+/* tombol panah */
+.slider-card .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* kiri & kanan */
+.slider-card .arrow.prev {
+  left: 16px;
+}
+
+.slider-card .arrow.next {
+  right: 16px;
+}
+
+.slide {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.4s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
