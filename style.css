@@ -881,3 +881,48 @@ footer {
 .slider-card .arrow.next {
   right: 15px;
 }
+
+
+.slider-card .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PANAH */
+.slider-card .arrow span {
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+/* kiri */
+.slider-card .arrow.prev span {
+  transform: rotate(-135deg);
+}
+
+/* kanan */
+.slider-card .arrow.next span {
+  transform: rotate(45deg);
+}
+
+/* posisi */
+.slider-card .arrow.prev {
+  left: 16px;
+}
+
+.slider-card .arrow.next {
+  right: 16px;
+}
