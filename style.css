@@ -1027,16 +1027,6 @@ footer {
 /* posisi */
 .slider-card .arrow.prev { left: 16px; }
 .slider-card .arrow.next { right: 16px; }
-
-/* panah pakai pseudo-element */
-.slider-card .arrow::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-top: 3px solid #1f2937;
-  border-right: 3px solid #1f2937;
-}
-
 .slider-card .arrow.prev::before {
   transform: rotate(-135deg);
 }
@@ -1082,66 +1072,4 @@ html {
 .slide p {
   text-align: justify;
   text-justify: inter-word;
-}
-
-
-/* ===============================
-   FINAL — PRESISI 100%
-   =============================== */
-
-/* card jangan jadi patokan */
-.slider-card {
-  position: relative;
-}
-
-/* slides jadi patokan TENGAH */
-.slider-card .slides {
-  position: relative;
-}
-
-/* tombol */
-.slider-card .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #2563eb;
-  border: none;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  z-index: 9999;
-}
-
-/* kiri */
-.slider-card .arrow.prev {
-  left: 20px;
-}
-
-/* kanan */
-.slider-card .arrow.next {
-  right: 20px;
-}
-
-/* panah kecil PRESISI */
-.slider-card .arrow::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-top: 3px solid white;
-  border-right: 3px solid white;
-}
-
-.slider-card .arrow.prev::before {
-  transform: rotate(-135deg);
-}
-
-.slider-card .arrow.next::before {
-  transform: rotate(45deg);
 }
