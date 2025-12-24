@@ -1077,3 +1077,47 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+/* =========================
+   FIX FINAL TOMBOL SLIDER
+   ========================= */
+
+.slider-card {
+  position: relative;
+}
+
+/* tombol prev & next */
+.slider-card .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+/* kiri */
+.slider-card .arrow.prev {
+  left: 20px;
+}
+
+/* kanan */
+.slider-card .arrow.next {
+  right: 20px;
+}
+
+/* JUSTIFY DESKRIPSI TENTANG */
+.slide p {
+  text-align: justify;
+  text-justify: inter-word;
+}
