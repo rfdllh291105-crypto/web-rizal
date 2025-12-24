@@ -1113,7 +1113,3 @@ html {
   opacity: 0;
   transform: translateX(40px);
 }
-.slider-card .arrow:active {
-  transform: translateY(-50%) scale(0.9);
-  background: #1e40af;
-}
