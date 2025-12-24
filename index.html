@@ -119,3 +119,40 @@
 </body>
 </html>
 
+<script>
+  const slides = document.querySelectorAll(".slide");
+  const nextBtn = document.querySelector(".arrow.next");
+  const prevBtn = document.querySelector(".arrow.prev");
+
+  let index = 0;
+  let isAnimating = false;
+
+  function showSlide(newIndex, direction) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const current = slides[index];
+    const next = slides[newIndex];
+
+    current.classList.remove("active");
+    current.classList.add(direction === "next" ? "exit-left" : "");
+
+    setTimeout(() => {
+      current.classList.remove("exit-left");
+
+      next.classList.add("active");
+      index = newIndex;
+      isAnimating = false;
+    }, 400);
+  }
+
+  nextBtn.addEventListener("click", () => {
+    const newIndex = (index + 1) % slides.length;
+    showSlide(newIndex, "next");
+  });
+
+  prevBtn.addEventListener("click", () => {
+    const newIndex = (index - 1 + slides.length) % slides.length;
+    showSlide(newIndex, "prev");
+  });
+</script>

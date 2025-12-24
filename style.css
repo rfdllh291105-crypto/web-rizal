@@ -1078,3 +1078,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ANIMASI SLIDE */
+.slide {
+  display: none;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* arah kebalik */
+.slide.exit-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
