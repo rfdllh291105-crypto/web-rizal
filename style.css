@@ -1078,53 +1078,46 @@ html {
   scroll-behavior: smooth;
 }
 
-/* JUSTIFY DESKRIPSI KEGIATAN*/
-.slide p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-
 /* =========================
-   FIX ANIMASI SLIDE (FINAL)
+   TOMBOL DI TENGAH FOTO
    ========================= */
 
-/* container */
-.slides {
+.slide-media {
   position: relative;
-  min-height: 450px; /* SESUAI TINGGI FOTO */
 }
 
-/* slide dasar */
-.slide {
+/* tombol panah */
+.slide-media .arrow {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 
-  opacity: 0;
-  transform: translateX(60px);
-  transition: all 0.45s ease;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
 
-  pointer-events: none;
+  background: rgba(37, 99, 235, 0.9);
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 50;
 }
 
-/* slide aktif */
-.slide.active {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
-  position: relative;
+/* kiri & kanan */
+.slide-media .arrow.prev {
+  left: 12px;
 }
 
-/* keluar ke kiri */
-.slide.exit-left {
-  opacity: 0;
-  transform: translateX(-60px);
+.slide-media .arrow.next {
+  right: 12px;
 }
 
-/* keluar ke kanan */
-.slide.exit-right {
-  opacity: 0;
-  transform: translateX(60px);
+/* hover biar hidup */
+.slide-media .arrow:hover {
+  background: #1e40af;
+  transform: translateY(-50%) scale(1.08);
 }
