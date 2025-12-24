@@ -127,44 +127,41 @@
   let index = 0;
   let isAnimating = false;
 
-  function showSlide(newIndex, direction) {
-    if (isAnimating) return;
+  function moveSlide(newIndex, direction) {
+    if (isAnimating || newIndex === index) return;
     isAnimating = true;
 
-    const currentSlide = slides[index];
-    const nextSlide = slides[newIndex];
+    const current = slides[index];
+    const next = slides[newIndex];
 
     // reset class
     slides.forEach(slide => {
       slide.classList.remove("active", "exit-left", "exit-right");
     });
 
-    // animasi keluar
-    if (direction === "next") {
-      currentSlide.classList.add("exit-left");
-      nextSlide.style.transform = "translateX(40px)";
-    } else {
-      currentSlide.classList.add("exit-right");
-      nextSlide.style.transform = "translateX(-40px)";
-    }
+    // set posisi awal slide baru
+    next.style.transform =
+      direction === "next" ? "translateX(60px)" : "translateX(-60px)";
 
-    nextSlide.classList.add("active");
+    next.classList.add("active");
+
+    // animasi slide lama keluar
+    current.classList.add(
+      direction === "next" ? "exit-left" : "exit-right"
+    );
 
     setTimeout(() => {
-      currentSlide.classList.remove("exit-left", "exit-right");
+      current.classList.remove("exit-left", "exit-right");
+      index = newIndex;
       isAnimating = false;
-    }, 400);
-
-    index = newIndex;
+    }, 450);
   }
 
   nextBtn.addEventListener("click", () => {
-    const newIndex = (index + 1) % slides.length;
-    showSlide(newIndex, "next");
+    moveSlide((index + 1) % slides.length, "next");
   });
 
   prevBtn.addEventListener("click", () => {
-    const newIndex = (index - 1 + slides.length) % slides.length;
-    showSlide(newIndex, "prev");
+    moveSlide((index - 1 + slides.length) % slides.length, "prev");
   });
 </script>
