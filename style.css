@@ -992,3 +992,69 @@ footer {
   opacity: 1;
   transform: translateX(0);
 }
+
+
+/* ===== FIX TOTAL SLIDER BUTTON ===== */
+
+.slider-card {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: visible;
+}
+
+/* tombol */
+.slider-card .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+  transition: all 0.25s ease;
+}
+
+/* posisi */
+.slider-card .arrow.prev { left: 16px; }
+.slider-card .arrow.next { right: 16px; }
+
+/* panah pakai pseudo-element */
+.slider-card .arrow::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #1f2937;
+  border-right: 3px solid #1f2937;
+}
+
+.slider-card .arrow.prev::before {
+  transform: rotate(-135deg);
+}
+
+.slider-card .arrow.next::before {
+  transform: rotate(45deg);
+}
+
+/* hover */
+.slider-card .arrow:hover {
+  background: #2563eb;
+}
+
+.slider-card .arrow:hover::before {
+  border-color: white;
+}
+
+/* animasi klik */
+.slider-card .arrow:active {
+  transform: translateY(-50%) scale(0.9);
+}
