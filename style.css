@@ -1089,7 +1089,7 @@ html {
 .slide.active {
   display: block;
   opacity: 1;
-  transform: translateX(40px);
+  transform: translateX(0);
 }
 
 /* arah kebalik */
