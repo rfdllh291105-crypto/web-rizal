@@ -1097,3 +1097,68 @@ html {
   opacity: 0;
   transform: translateX(-40px);
 }
+
+/* ===== RESET TOTAL TOMBOL ===== */
+.arrow {
+  all: unset;
+}
+
+/* ===== FOTO WRAPPER ===== */
+.foto-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* ===== FOTO ===== */
+.foto-wrap img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+/* ===== TOMBOL PANAH ===== */
+.foto-wrap .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.9);
+
+  cursor: pointer;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* kiri */
+.foto-wrap .arrow.prev {
+  left: 12px;
+}
+
+/* kanan */
+.foto-wrap .arrow.next {
+  right: 12px;
+}
+
+/* ===== PANAH DI DALAM BULAT (PRESISI) ===== */
+.foto-wrap .arrow::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.foto-wrap .arrow.prev::before {
+  transform: rotate(-135deg);
+}
+
+.foto-wrap .arrow.next::before {
+  transform: rotate(45deg);
+}
