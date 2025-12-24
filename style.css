@@ -1085,26 +1085,21 @@ html {
 }
 
 
-/* =========================
-   PRESISI MATEMATIS TENGAH
-   ========================= */
+/* ===============================
+   FINAL — PRESISI 100%
+   =============================== */
 
+/* card jangan jadi patokan */
 .slider-card {
   position: relative;
 }
 
-/* bikin sumbu tengah card */
-.slider-card::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 0;
-  pointer-events: none;
+/* slides jadi patokan TENGAH */
+.slider-card .slides {
+  position: relative;
 }
 
-/* tombol panah */
+/* tombol */
 .slider-card .arrow {
   position: absolute;
   top: 50%;
@@ -1123,30 +1118,30 @@ html {
 
   z-index: 9999;
 }
+
+/* kiri */
 .slider-card .arrow.prev {
   left: 20px;
 }
 
+/* kanan */
 .slider-card .arrow.next {
   right: 20px;
 }
+
+/* panah kecil PRESISI */
 .slider-card .arrow::before {
   content: '';
   width: 10px;
   height: 10px;
-
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
-
-  display: block;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
 }
 
-/* kiri */
 .slider-card .arrow.prev::before {
   transform: rotate(-135deg);
 }
 
-/* kanan */
 .slider-card .arrow.next::before {
   transform: rotate(45deg);
 }
