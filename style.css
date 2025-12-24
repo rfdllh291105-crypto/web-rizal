@@ -1058,3 +1058,18 @@ footer {
 .slider-card .arrow:active {
   transform: translateY(-50%) scale(0.9);
 }
+
+/* bikin area slider jadi patokan */
+.slides {
+  position: relative;
+}
+
+/* panah ngikut tinggi slide */
+.slider-card .arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#dokumentasi {
+  scroll-margin-top: 120px; /* sesuaikan tinggi navbar */
+}
