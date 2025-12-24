@@ -46,11 +46,11 @@
 
  <!-- SLIDES -->
   <div class="slider-card FIXED-SLIDER">
+
     <button class="arrow prev"></button>
 
   <div class="slides">
     <div class="slide active">
-      <div class="slide-media">
       <img src="kegiatan1.jpg">
       <p>Event BSI Flash – Untuk pertama kalinya saya dilibatkan dalam 
         acara Event BSI Flash yang diadakakan di kampus UBSI Cilebut pada 
@@ -63,7 +63,6 @@
     </div>
 
     <div class="slide">
-      <div class="slide-media">
       <img src="kegiatan2-2.jpg">
       <img src="kegiatan2-3.jpg">
       <p>Kegiatan 2 – Pada kali ini, saya di unjuk oleh Bapak Sugiono M.Kom untuk membawa sekolahan
@@ -75,7 +74,6 @@
     </div>
     
   <div class="slide">
-    <div class="slide-media">
       <img src="kegiatan3.jpg">
       <p>Kegiatan 3 – Acara kali ini adalah Seminar Digital Creative yang berjudul AI FOR SMART CONTENT & 
         PROBLEM SOLVING yang diadakan di kampus UBSI Cilebut pada tanggal  16 Desember 2025. Kali ini saya
@@ -88,7 +86,6 @@
     </div>
 
   <div class="slide">
-    <div class="slide-media">
       <img src="kegiatan4.jpg">
       <p>Kegiatan 4 – Pada tanggal 17 Desember 2025 tepatnya setelah saya menjadi koordinator acara di kampus UBSI
         Cilebut, di acara Workshop Digital Creative ini yang berjudul LET'S SPEAK UP WITH A GOOD PUBLIC SPEAKING &
@@ -97,19 +94,16 @@
     </div>
 
     <div class="slide">
-      <div class="slide-media">
       <img src="kegiatan5.jpg">
       <p>Kegiatan 5 – Menjadi panitia …</p>
     </div>
 
     <div class="slide">
-      <div class="slide-media">
       <img src="kegiatan6.jpg">
       <p>Kegiatan 6 – Menjadi panitia …</p>
     </div>
 
     <div class="slide">
-      <div class="slide-media">
       <img src="kegiatan7.jpg">
       <p>Kegiatan 7 – Menjadi panitia …</p>
     </div>
@@ -125,49 +119,3 @@
 </body>
 </html>
 
-<script>
-  const slides = document.querySelectorAll(".slide");
-  const nextBtn = document.querySelector(".arrow.next");
-  const prevBtn = document.querySelector(".arrow.prev");
-
-  let index = 0;
-  let isAnimating = false;
-
-  function moveSlide(newIndex, direction) {
-    if (isAnimating || newIndex === index) return;
-    isAnimating = true;
-
-    const current = slides[index];
-    const next = slides[newIndex];
-
-    // reset class
-    slides.forEach(slide => {
-      slide.classList.remove("active", "exit-left", "exit-right");
-    });
-
-    // set posisi awal slide baru
-    next.style.transform =
-      direction === "next" ? "translateX(60px)" : "translateX(-60px)";
-
-    next.classList.add("active");
-
-    // animasi slide lama keluar
-    current.classList.add(
-      direction === "next" ? "exit-left" : "exit-right"
-    );
-
-    setTimeout(() => {
-      current.classList.remove("exit-left", "exit-right");
-      index = newIndex;
-      isAnimating = false;
-    }, 450);
-  }
-
-  nextBtn.addEventListener("click", () => {
-    moveSlide((index + 1) % slides.length, "next");
-  });
-
-  prevBtn.addEventListener("click", () => {
-    moveSlide((index - 1 + slides.length) % slides.length, "prev");
-  });
-</script>
