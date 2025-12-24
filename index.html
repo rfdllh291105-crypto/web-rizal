@@ -59,7 +59,7 @@
         bawaan para peserta event, coach atau pelatih dari masing-masing 
         sekolah dann para penonton agar tidak membawa rokok atau vape dan 
         benda benda tajam lainnya demi menjaga ketertiban dan kelancaran 
-        event tersebut. …</p>
+        event tersebut.</p>
     </div>
 
     <div class="slide">
@@ -70,17 +70,27 @@
         acara ini dihadiri dari berbagai sekolah namun sekolah yang saya bawa ini adalah SMK ALQI PROFESI 
         dan SMKS BINA MANDIRI BOGOR. Tujuan kegiatan ini adalah untuk memberikan wawasan dan pengalaman 
         langsung kepada peserta mengenai dunia industri kreatif serta meningkatkan kesiapan dan kompetensi 
-        di bidang digital.…</p>
+        di bidang digital.</p>
     </div>
     
   <div class="slide">
       <img src="kegiatan3.jpg">
-      <p>Kegiatan 3 – Menjadi panitia …</p>
+      <p>Kegiatan 3 – Acara kali ini adalah Seminar Digital Creative yang berjudul AI FOR SMART CONTENT & 
+        PROBLEM SOLVING yang diadakan di kampus UBSI Cilebut pada tanggal  16 Desember 2025. Kali ini saya
+        diberi kesempatan untuk menggantikan posisi teman saya yang bertugas jadi koordinator acara tersebut
+        dikarenakan bentrok sama jadwal dia presentasi. Jujur ini first experience saya jadi koordinator acara
+        karena sebelumnya belum pernah menjadi koordinator acara baik di lingkungan rumah maupun lingkungan
+        sekolah, jadi saya berterimakasih terutama kepada teman saya yang sudah mempercayai saya untuk menggantikan 
+        posisinya dan terimakasih juga kepada pak Sugiono telah mengasih kesempatan saya untuk menjadi koordinator di
+        acara tersebut. </p>
     </div>
 
   <div class="slide">
       <img src="kegiatan4.jpg">
-      <p>Kegiatan 4 – Menjadi panitia …</p>
+      <p>Kegiatan 4 – Pada tanggal 17 Desember 2025 tepatnya setelah saya menjadi koordinator acara di kampus UBSI
+        Cilebut, di acara Workshop Digital Creative ini yang berjudul LET'S SPEAK UP WITH A GOOD PUBLIC SPEAKING &
+        WRITING saya mengajukan diri untuk menjadi panitia dokumentasi video & reels. Selain saya menjadi panitia,
+        disini juga saya melatih skill editing saya agar bisa terus berkembang dan berkembang. </p>
     </div>
 
     <div class="slide">
@@ -115,19 +125,46 @@
   const prevBtn = document.querySelector(".arrow.prev");
 
   let index = 0;
+  let isAnimating = false;
 
-  function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[i].classList.add("active");
+  function showSlide(newIndex, direction) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const currentSlide = slides[index];
+    const nextSlide = slides[newIndex];
+
+    // reset class
+    slides.forEach(slide => {
+      slide.classList.remove("active", "exit-left", "exit-right");
+    });
+
+    // animasi keluar
+    if (direction === "next") {
+      currentSlide.classList.add("exit-left");
+      nextSlide.style.transform = "translateX(40px)";
+    } else {
+      currentSlide.classList.add("exit-right");
+      nextSlide.style.transform = "translateX(-40px)";
+    }
+
+    nextSlide.classList.add("active");
+
+    setTimeout(() => {
+      currentSlide.classList.remove("exit-left", "exit-right");
+      isAnimating = false;
+    }, 400);
+
+    index = newIndex;
   }
 
   nextBtn.addEventListener("click", () => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
+    const newIndex = (index + 1) % slides.length;
+    showSlide(newIndex, "next");
   });
 
   prevBtn.addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
+    const newIndex = (index - 1 + slides.length) % slides.length;
+    showSlide(newIndex, "prev");
   });
 </script>
