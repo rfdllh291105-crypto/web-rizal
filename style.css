@@ -1083,13 +1083,13 @@ html {
   display: none;
   opacity: 0;
   transform: translateX(40px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 1.0s ease, transform 1.0s ease;
 }
 
 .slide.active {
   display: block;
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(40px);
 }
 
 /* arah kebalik */
