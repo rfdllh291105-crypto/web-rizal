@@ -1162,3 +1162,68 @@ html {
 .foto-wrap .arrow.next::before {
   transform: rotate(45deg);
 }
+
+#about .card p {
+  text-align: justify;
+}
+
+.slider-card .arrow {
+  transition: all 0.2s ease;
+}
+
+.slider-card .arrow:hover {
+  background: #2563eb;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-card .arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+
+/* BIKIN SLIDER JADI PATOKAN */
+.slider-card {
+  position: relative;
+}
+
+/* TOMBOL PANAH */
+.slider-card .arrow {
+  position: absolute;
+  top: 50%;                 /* KUNCI: tengah vertikal */
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(0,0,0,0.45);
+  z-index: 10;
+}
+
+/* POSISI KIRI */
+.slider-card .arrow.prev {
+  left: 16px;
+}
+
+/* POSISI KANAN */
+.slider-card .arrow.next {
+  right: 16px;
+}
+
+/* PANAHNYA */
+.slider-card .arrow::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.slider-card .arrow.next::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
